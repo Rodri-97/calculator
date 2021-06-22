@@ -47,8 +47,8 @@ function operate(operator, num1, num2) {
     return sum;
 }
 
-const displayValue = document.getElementById("display-bar");
-displayValue.value = "0";
+const displayBar = document.getElementById("display-bar");
+displayBar.value = "0";
 
 const digitButtons = document.querySelectorAll(".digit-btn");
 const clearButton = document.getElementById("clear-btn");
@@ -56,17 +56,17 @@ const clearButton = document.getElementById("clear-btn");
 function addNumberEventListener() {
     digitButtons.forEach((digitButton) => {
         digitButton.addEventListener("click", () => {
-            if (displayValue.value === "0") {
-                displayValue.value = "";
+            if (displayBar.value === "0") {
+                displayBar.value = "";
             }
-            displayValue.value += digitButton.textContent;
+            displayBar.value += digitButton.textContent;
         });
     });
 }
 
 function addClearEventListener() {
     clearButton.addEventListener("click", () => {
-        displayValue.value = "0";
+        displayBar.value = "0";
     });
 }
 
