@@ -52,6 +52,7 @@ displayBar.value = "0";
 
 const digitButtons = document.querySelectorAll(".digit-btn");
 const clearButton = document.getElementById("clear-btn");
+const operatorButtons = document.querySelectorAll(".operator-btn");
 
 digitButtons.forEach((digitButton) => {
     digitButton.addEventListener("click", () => {
