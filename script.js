@@ -28,7 +28,6 @@ function divide(...nums) {
     return sum;
 }
 
-
 function operate(operator, num1, num2) {
     let sum = 0;
     switch(operator) {
@@ -47,3 +46,26 @@ function operate(operator, num1, num2) {
     }
     return sum;
 }
+
+const displayValue = document.getElementById("display-bar");
+//displayValue.value = "0";
+
+const digitButtons = document.querySelectorAll(".digit-btn");
+const clearButton = document.getElementById("clear-btn");
+
+function addNumberEventListener() {
+    digitButtons.forEach((digitButton) => {
+        digitButton.addEventListener("click", () => {
+            displayValue.value += digitButton.textContent;
+        });
+    });
+}
+
+function addClearEventListener() {
+    clearButton.addEventListener("click", () => {
+        displayValue.value = "";
+    });
+}
+
+addNumberEventListener();
+addClearEventListener();

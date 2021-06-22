@@ -35,6 +35,7 @@ body {
   border: 3px solid gold;
   color: gold;
   font-size: 30px;
+  text-align: right;
 }
 
 .calculator div {
@@ -45,6 +46,10 @@ body {
   padding-bottom: 25%;
   color: purple;
   font-size: 30px;
+}
+
+.calculator div:hover {
+  border: 5px solid red;
 }
 
 #clear-btn {
