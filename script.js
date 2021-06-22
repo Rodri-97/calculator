@@ -53,22 +53,15 @@ displayBar.value = "0";
 const digitButtons = document.querySelectorAll(".digit-btn");
 const clearButton = document.getElementById("clear-btn");
 
-function addDigitsEventListener() {
-    digitButtons.forEach((digitButton) => {
-        digitButton.addEventListener("click", () => {
-            if (displayBar.value === "0") {
-                displayBar.value = "";
-            }
-            displayBar.value += digitButton.textContent;
-        });
+digitButtons.forEach((digitButton) => {
+    digitButton.addEventListener("click", () => {
+        if (displayBar.value === "0") {
+            displayBar.value = "";
+        }
+        displayBar.value += digitButton.textContent;
     });
-}
+});
 
-function addClearEventListener() {
-    clearButton.addEventListener("click", () => {
-        displayBar.value = "0";
-    });
-}
-
-addDigitsEventListener();
-addClearEventListener();
+clearButton.addEventListener("click", () => {
+    displayBar.value = "0";
+});
