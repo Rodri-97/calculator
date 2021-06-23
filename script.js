@@ -1,31 +1,17 @@
-function add(...nums) {
-    let sum = 0;
-    nums.forEach((num) => sum += num );
-    return sum;
+function add(num1, num2) {
+    return num1 + num2;
 }
 
-function subtract(...nums) {
-    let sum = nums[0];
-    for (let i = 1; i < nums.length; i++) {
-        sum -= nums[i];
-    }
-    return sum;
+function subtract(num1, num2) {
+    return num1 - num2;
 }
 
-function multiply(...nums) {
-    let sum = nums[0];
-    for (let i = 1; i < nums.length; i++) {
-        sum *= nums[i];
-    }
-    return sum;
+function multiply(num1, num2) {
+    return num1 * num2;
 }
 
-function divide(...nums) {
-    let sum = nums[0];
-    for (let i = 1; i < nums.length; i++) {
-        sum /= nums[i];
-    }
-    return sum;
+function divide(num1, num2) {
+    return num1 / num2;
 }
 
 function operate(operator, num1, num2) {
