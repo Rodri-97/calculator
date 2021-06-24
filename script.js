@@ -44,10 +44,14 @@ const equalsButton = document.getElementById("equals-btn");
 let numbers = [];
 let operators = [];
 
-clearButton.addEventListener("click", () => {
+function clear() {
     displayBar.value = "0";
     numbers = [];
     operators = [];
+}
+
+clearButton.addEventListener("click", () => {
+    clear();
 });
 
 digitButtons.forEach((digitButton) => {
@@ -74,7 +78,14 @@ operatorButtons.forEach((operatorButton) => {
 function getResult(numbers, operators) {
     let result = numbers[0];
     for (let i = 1; i < numbers.length; i++) {
-        result = operate(operators[i - 1], result, numbers[i]);
+        if (operators[i - 1] === "/" && numbers[i] === 0) {
+            alert("C'mon bro, you know you can't divide by 0!");
+            clear();
+            return 0;
+        }
+        else {
+            result = operate(operators[i - 1], result, numbers[i]);
+        }
     }
     return result;
 }
