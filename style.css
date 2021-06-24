@@ -1,3 +1,10 @@
+:root {
+  --dark-purple: rgb(67, 28, 83);
+  --light-purple: rgb(150, 130, 200);
+  --light-green: rgb(144,238,144);
+  --light-red: rgb(233,116,81);
+}
+
 body {
   width: 100%;
   background: url("space-background.jpeg") no-repeat center fixed;
@@ -19,7 +26,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
   grid-gap: 5px;
-  background-color: purple;
+  background-color: var(--dark-purple);
   border-radius: 20px;
   border: 5px solid gold;
   padding: 10px;
@@ -31,31 +38,44 @@ body {
   height: 60px;
   width: 90%;
   grid-column: 1 / -1;
-  background-color: purple;
-  border: 3px solid gold;
+  background-color: var(--light-purple);
   color: gold;
-  font-size: 30px;
+  font-size: 45px;
   text-align: right;
+  border: none;
 }
 
 #clear-btn {
-  color: red;
+  color: var(--light-green);
+  grid-column: 1 / 3;
 }
 
 #back-btn {
-  color: green;
+  color: var(--light-red);
+  grid-column: 3 / 5;
 }
 
 .calculator div {
-  background-color: gold;
-  border: 1px solid purple;
+  border: 1px solid var(--dark-purple);
   border-radius: 20px;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  color: purple;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--dark-purple);
   font-size: 25px;
 }
 
 .calculator div:hover {
-  border: 5px solid red;
+  border: 4px solid cyan;
+}
+
+.digit-btn, #dot-btn {
+  background-color: gold;
+}
+
+.operator-btn, #equals-btn {
+  background-color: white;
+}
+
+#clear-btn, #back-btn {
+  background-color: rgb(47,79,79);
 }
