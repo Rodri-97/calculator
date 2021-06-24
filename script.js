@@ -57,7 +57,7 @@ clearButton.addEventListener("click", () => {
 digitButtons.forEach((digitButton) => {
     digitButton.addEventListener("click", () => {
         const result = getResult(numbers, operators);
-        if (displayBar.value === "0" || displayBar.value === String(result)) {
+        if (displayBar.value === "0" || displayBar.value === String(result) || displayBar.value === "You suck.") {
             displayBar.value = "";
         }
         displayBar.value += digitButton.textContent;
@@ -79,9 +79,8 @@ function getResult(numbers, operators) {
     let result = numbers[0];
     for (let i = 1; i < numbers.length; i++) {
         if (operators[i - 1] === "/" && numbers[i] === 0) {
-            alert("C'mon bro, you know you can't divide by 0!");
             clear();
-            return 0;
+            return "You suck.";
         }
         result = operate(operators[i - 1], result, numbers[i]);
     }
