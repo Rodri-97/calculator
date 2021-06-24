@@ -46,33 +46,27 @@ const backButton = document.getElementById("back-btn");
 let numbers = [];
 let operators = [];
 
-function clear() {
-    displayBar.value = "0";
+function resetNumbersAndOperators() {
     numbers = [];
     operators = [];
 }
 
 clearButton.addEventListener("click", () => {
-    clear();
+    displayBar.value = "0";
+    resetNumbersAndOperators();
 });
 
 function getResult(numbers, operators) {
     let result = numbers[0];
     for (let i = 1; i < numbers.length; i++) {
         if (operators[i - 1] === "/" && numbers[i] === 0) {
-            clear();
+            resetNumbersAndOperators();
             return "You suck.";
         }
         result = operate(operators[i - 1], result, numbers[i]);
     }
     return result;
 }
-
-// ---- Test getResult() function ----
-//const numbers = [5, 6, 7, 8];
-//const operators = ["+", "-", "*"];
-//getResult(numbers, operators);
-// 5 + 6 = 11 --> 11 - 7 = 4 --> 4 * 8 = 32
 
 digitButtons.forEach((digitButton) => {
     digitButton.addEventListener("click", () => {
@@ -100,6 +94,7 @@ equalsButton.addEventListener("click", () => {
     numbers.push(lastNumber);
     const result = getResult(numbers, operators);
     displayBar.value = String(result);
+    resetNumbersAndOperators();
 });
 
 dotButton.addEventListener("click", () => {
