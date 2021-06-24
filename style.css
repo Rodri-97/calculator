@@ -17,8 +17,8 @@ body {
   height: 470px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-gap: 10px;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
   background-color: purple;
   border-radius: 20px;
   border: 5px solid gold;
@@ -27,7 +27,7 @@ body {
 
 #display-bar {
   display: block;
-  margin: 10px auto 10px auto;
+  margin: 5px auto 5px auto;
   height: 60px;
   width: 90%;
   grid-column: 1 / -1;
@@ -38,6 +38,14 @@ body {
   text-align: right;
 }
 
+#clear-btn {
+  color: red;
+}
+
+#back-btn {
+  color: green;
+}
+
 .calculator div {
   background-color: gold;
   border: 1px solid purple;
@@ -45,13 +53,9 @@ body {
   padding-top: 25%;
   padding-bottom: 25%;
   color: purple;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .calculator div:hover {
   border: 5px solid red;
-}
-
-#clear-btn {
-  color: red;
 }
