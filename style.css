@@ -3,6 +3,7 @@
   --light-purple: rgb(150, 130, 200);
   --light-green: rgb(144,238,144);
   --light-red: rgb(233,116,81);
+  --dark-slate-gray: rgb(47,79,79);
 }
 
 body {
@@ -65,7 +66,7 @@ body {
 }
 
 .calculator div:hover {
-  border: 4px solid cyan;
+  border: 4px solid blue;
 }
 
 .digit-btn, #dot-btn {
@@ -77,5 +78,5 @@ body {
 }
 
 #clear-btn, #back-btn {
-  background-color: rgb(47,79,79);
+  background-color: var(--dark-slate-gray);
 }
