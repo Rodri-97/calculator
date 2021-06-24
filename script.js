@@ -40,6 +40,8 @@ const clearButton = document.getElementById("clear-btn");
 const digitButtons = document.querySelectorAll(".digit-btn");
 const operatorButtons = document.querySelectorAll(".operator-btn");
 const equalsButton = document.getElementById("equals-btn");
+const dotButton = document.getElementById("dot-btn");
+const backButton = document.getElementById("back-btn");
 
 let numbers = [];
 let operators = [];
@@ -98,4 +100,22 @@ equalsButton.addEventListener("click", () => {
     numbers.push(lastNumber);
     const result = getResult(numbers, operators);
     displayBar.value = String(result);
+});
+
+dotButton.addEventListener("click", () => {
+    if (displayBar.value.includes(".")) {
+        return;
+    }
+    displayBar.value += ".";
+});
+
+backButton.addEventListener("click", () => {
+    if (displayBar.value === "0") {
+        return;
+    }
+    if (displayBar.value.length === 1) {
+        displayBar.value = "0";
+        return;
+    }
+    displayBar.value = displayBar.value.slice(0, -1);
 });
