@@ -83,9 +83,7 @@ function getResult(numbers, operators) {
             clear();
             return 0;
         }
-        else {
-            result = operate(operators[i - 1], result, numbers[i]);
-        }
+        result = operate(operators[i - 1], result, numbers[i]);
     }
     return result;
 }
