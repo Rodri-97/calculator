@@ -1,3 +1,4 @@
 My goal with this project is to build a calculator using HTML, CSS, and JavaScript, as per The Odin Project's specifications: https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator
 
 This tutorial about CSS grid was particularly helpful in this project: https://www.youtube.com/watch?v=9zBsdzdE4sM
+This tutorial helped me with CSS variables: https://www.w3schools.com/css/css3_variables.asp
