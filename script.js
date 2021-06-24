@@ -51,7 +51,8 @@ clearButton.addEventListener("click", () => {
 
 digitButtons.forEach((digitButton) => {
     digitButton.addEventListener("click", () => {
-        if (displayBar.value === "0") {
+        const result = getResult(numbers, operators);
+        if (displayBar.value === "0" || displayBar.value === String(result)) {
             displayBar.value = "";
         }
         displayBar.value += digitButton.textContent;
@@ -64,7 +65,8 @@ operatorButtons.forEach((operatorButton) => {
         const newNumber = Number(displayBar.value);
         operators.push(operator);
         numbers.push(newNumber);
-        displayBar.value = "";
+        const result = getResult(numbers, operators);
+        displayBar.value = String(result);
     });
 });
 
