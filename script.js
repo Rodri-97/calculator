@@ -113,7 +113,7 @@ backButton.addEventListener("click", () => {
     if (displayBar.value === "0") {
         return;
     }
-    if (displayBar.value.length === 1) {
+    if (displayBar.value.length === 1 || displayBar.value === "You suck.") {
         displayBar.value = "0";
         return;
     }
