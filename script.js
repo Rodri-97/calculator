@@ -29,6 +29,7 @@ function operate(operator, sum, newNum) {
             sum = divide(sum, newNum);
             break;
     }
+    sum = Number(sum.toFixed(6));
     return sum;
 }
 
