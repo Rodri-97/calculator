@@ -37,7 +37,7 @@ body {
   display: block;
   margin: 5px auto 5px auto;
   height: 60px;
-  width: 90%;
+  width: 95%;
   grid-column: 1 / -1;
   background-color: var(--light-purple);
   color: gold;
